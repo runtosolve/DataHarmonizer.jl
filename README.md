@@ -17,7 +17,7 @@ other module installed.
 ## 1. One-time setup (Windows PowerShell)
 
 ```powershell
-cd "C:\Users\OSAMA BIN ELI\OneDrive\Desktop\RunToSolve\SteelDataInitiative\DataHarmonizer.jl"
+cd "C:\Users\ELIKEM.ANYOMI\OneDrive\Desktop\RunToSolve\SteelDataInitiative\DataHarmonizer.jl"
 julia --project=. -e "using Pkg; Pkg.instantiate()"
 ```
 
@@ -38,7 +38,7 @@ Point it at a folder holding the papers you want to compare. One sub-folder per 
 the normal shape, but a flat folder works too.
 
 ```powershell
-cd "C:\Users\OSAMA BIN ELI\OneDrive\Desktop\RunToSolve\SteelDataInitiative\DataHarmonizer.jl"
+cd "C:\Users\ELIKEM.ANYOMI\OneDrive\Desktop\RunToSolve\SteelDataInitiative\DataHarmonizer.jl"
 julia --project=.
 ```
 
@@ -157,7 +157,7 @@ To redo everything, pass `resume=false`.
 ## 6. Tests
 
 ```powershell
-cd "C:\Users\OSAMA BIN ELI\OneDrive\Desktop\RunToSolve\SteelDataInitiative\DataHarmonizer.jl"
+cd "C:\Users\ELIKEM.ANYOMI\OneDrive\Desktop\RunToSolve\SteelDataInitiative\DataHarmonizer.jl"
 julia --project=. -e "using Pkg; Pkg.test()"
 ```
 

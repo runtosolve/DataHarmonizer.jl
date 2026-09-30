@@ -63,9 +63,12 @@ function read_csv(path::AbstractString)
 end
 
 function csv_field(s::AbstractString)
-    needs = occursin(r"[,\"\r\n]", s) || startswith(s, " ") || endswith(s, " ")
-    needs || return String(s)
-    return "\"" * replace(s, "\"" => "\"\"") * "\""
+    # a value written by the model can contain a line break; left in, it would split the
+    # row in two, and every reader here works a line at a time
+    t = replace(String(s), Char(13) => ' ', Char(10) => ' ')
+    needs = occursin(',', t) || occursin('"', t) || startswith(t, " ") || endswith(t, " ")
+    needs || return t
+    return string('"', replace(t, "\"" => "\"\""), '"')
 end
 csv_line(fields) = join((csv_field(String(f)) for f in fields), ",")
 
